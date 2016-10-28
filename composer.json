@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=5.3.0",
-    "symphony/yaml": "3.x"
+    "symfony/yaml": "3.x"
   },
   "autoload": {
     "psr-4": {
