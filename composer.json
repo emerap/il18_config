@@ -1,0 +1,27 @@
+{
+  "name": "emerap/il18_config",
+  "type": "library",
+  "description": "Cache interface for integration into third-party library",
+  "keywords": [
+    "config", "library"
+  ],
+  "homepage": "http://emerap.com",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Alexander Pokhodyun",
+      "email": "karbukul@yourtask.ru",
+      "homepage": "https://vk.com/karbunkul",
+      "role": "Project Founder"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "symphony/yaml": "3.x"
+  },
+  "autoload": {
+    "psr-4": {
+      "Emerap\\Il18Config\\": "./src/"
+    }
+  }
+}
