@@ -56,14 +56,18 @@ trait Il18ConfigTrait {
   private static function getServices() {
     if (is_null(self::$services)) {
       $filename = static::getServicesJson();
-      if (file_exists($filename)) {
-        self::$services = Yaml::parse(file_get_contents($filename));
-      }
-      else {
-        throw new Il18ConfigException("Wrong filename " . $filename);
-      }
+      self::setupIl18($filename);
     }
     return self::$services;
+  }
+
+  public static function setupIl18($filename) {
+    if (file_exists($filename)) {
+      self::$services = Yaml::parse(file_get_contents($filename));
+    }
+    else {
+      throw new Il18ConfigException("Wrong filename " . $filename);
+    }
   }
 
 }
